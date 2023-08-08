@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="project_jeetson_driver" name="control_main" type="driving_main.py" />
+    <node pkg="project_jeetson_driver" name="motor_driver" type="ref_driver_node.py" />
+</launch>

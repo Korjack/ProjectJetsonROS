@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+        <!-- camera input node channel 0 -->
+        <!-- <node pkg="camera_input" name="camera0" type="camera0.py" output="screen">
+            <param name="cam" type="int" value="0" />
+            <param name="x" type="int" value="640" />
+            <param name="y" type="int" value="360" />
+	    </node> -->
+
+        <!-- camera input node channel 2 (change number) -->
+        <!-- <node pkg="camera_input" name="camera1" type="camera1.py" output="screen">
+            <param name="cam" type="int" value="1" />
+            <param name="x" type="int" value="640" />
+            <param name="y" type="int" value="360" />
+	    </node> -->
+
+        <!-- gps node start -->
+        <node pkg="ublox_c94_m8p" name="gps_node" type="gps.py" args="ttyACM0 9600" output="screen"/>
+
+        <!-- car driving control node start -->
+        <!-- <node pkg="ioelectron_cardriver_r1" name="gilbot_r1" type="cardrv.py" output="screen">
+            <param name="port" type="str" value="ttyTHS2" />
+	    </node> -->
+
+        <!-- user project process node start -->
+        <!-- <node pkg="driving_execute" name="launch_main" type="driving_main.py" output="screen"/> -->
+
+        <!-- rplidar process node start -->
+        <!-- <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/>A1/A2 -->
+        <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
+        <!-- <param name="frame_id"            type="string" value="laser_frame"/>
+        <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+        </node> -->
+</launch>
